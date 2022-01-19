@@ -82,7 +82,7 @@
       </repository>
 	  <snapshotRepository>
             <id>nexus-premise</id>
-            <url>http://172.31.98.18:8081/repository/knoteapp-snapshot/</url>
+            <url>http://172.31.98.182:8081/repository/knoteapp-snapshot/</url>
         </snapshotRepository>
    </distributionManagement>
 
