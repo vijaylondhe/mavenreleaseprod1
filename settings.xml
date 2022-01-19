@@ -14,7 +14,7 @@
     <mirror>
       <id>nexus-premise</id>
       <!-- <name>Nexus On-Premise</name> -->
-      <url>http://ec2-15-206-189-141.ap-south-1.compute.amazonaws.com:8081/repository/maven-public/</url>
+      <url>http://172.31.98.182:8081/repository/maven-public/</url>
       <mirrorOf>*</mirrorOf>
     </mirror>
   </mirrors>
