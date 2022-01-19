@@ -60,7 +60,7 @@ pipeline {
       }
       steps {
         script {
-          withCredentials([usernamePassword(credentialsId: 'nexus-repo', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]){
+          withCredentials([usernamePassword(credentialsId: 'nexus', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]){
           withMaven(globalMavenSettingsFilePath: 'settings.xml', jdk: "java-8", maven: "Maven3") {
             sh "mvn -Drevision=${ARTIFACT_VERSION} -Dserver.username=${USERNAME} -Dserver.password=${PASSWORD} deploy"
           }
@@ -75,7 +75,7 @@ pipeline {
       }
       steps {
         script {
-          withCredentials([usernamePassword(credentialsId: 'nexus-repo', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]){
+          withCredentials([usernamePassword(credentialsId: 'nexus', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]){
           withMaven(globalMavenSettingsFilePath: 'settings.xml', jdk: "java-8", maven: "Maven3") {
             sh "mvn -Drevision=${ARTIFACT_VERSION} -Dserver.username=${USERNAME} -Dserver.password=${PASSWORD} release:clean release:prepare release:perform"
           }
